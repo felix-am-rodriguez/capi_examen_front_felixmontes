@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">Nombre de Usuario</th>
+                    <th scope="col">Fecha de Nacimiento</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">Direcci&oacute;n</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let Usuario of ArregloUsuarios">
+                    <th>{{Usuario.name}}</th>
+                    <td>{{Usuario.fecha_nacimiento | date:'dd/MM/yyyy'}}</td>
+                    <td>{{Usuario.edad}}</td>
+                    <td>{{Usuario.direccion.domicilio + ", #" + Usuario.direccion.numero_exterior + ", Col. " +
+                        Usuario.direccion.colonia + ", CP: " + Usuario.direccion.cp + ", Ciudad: " + 
+                        Usuario.direccion.ciudad}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
